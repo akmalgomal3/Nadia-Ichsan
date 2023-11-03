@@ -10,4 +10,4 @@ def process_name(request, name):
     # Another way to format the string is by using slugify
     # formatted_name = slugify(name).replace('-', ' ')
 
-    return render(request, 'index.html', {'formatted_name': formatted_name})
+    return render(request, './index.html', {'formatted_name': formatted_name})
