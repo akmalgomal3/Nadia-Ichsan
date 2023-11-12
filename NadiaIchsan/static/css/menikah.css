@@ -38,8 +38,8 @@ html {
 
 
 .hero {
-  background-image: url("../image/1.jpg");
-  background: url("../image/1.jpg") no-repeat center center fixed;
+  background-image: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/1.jpg");
+  background: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/1.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -51,8 +51,18 @@ html {
   font-family: 'Raleway', sans-serif;
 }
 
+#home{
+    background: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/1.jpg#t=0.001") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
 #regular-section{
-  background: url("../image/5-1.jpg") center;
+  background: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/5-1.jpg") center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -60,7 +70,7 @@ html {
 }
 
 #Waktu{
-  background: url("../image/4-1.jpg") center;
+  background: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/4-1.jpg") center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -68,7 +78,7 @@ html {
 }
 
 #lokasi{
-  background: url("../image/8-1.jpg") center;
+  background: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/8.jpg") center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -452,7 +462,7 @@ body.preloader-site {
 .preloader-wrapper {
   height: 100%;
   width: 100%;
-  background: #D8A9A8;
+  background: #111111;
   position: fixed;
   top: 0;
   left: 0;
@@ -577,7 +587,7 @@ body.preloader-site {
 
 
 .foto1 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/sherly-daeng-kang-emil.jpg");
+  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/sherly-daeng-kang-emil.jpg");
   background-size: cover;
   background-position: center;
   background-repeat:no-repeat;
@@ -586,7 +596,7 @@ body.preloader-site {
 
 
 .foto2 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/sherly-daeng-cashbac.jpg");
+  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/sherly-daeng-cashbac.jpg");
   background-size: cover;
   background-position: center;
   background-repeat:no-repeat;
@@ -594,7 +604,7 @@ body.preloader-site {
 }
 
 .foto3 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/sherly-daeng-selfie.jpg");
+  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/sherly-daeng-selfie.jpg");
   background-size: cover;
   background-position: top;
   background-repeat:no-repeat;
@@ -602,7 +612,7 @@ body.preloader-site {
 }
 
 .foto4 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/sherly-daeng-lamaran.jpg");
+  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/sherly-daeng-lamaran.jpg");
   background-size: cover;
   background-position: top;
   background-repeat:no-repeat;
@@ -610,7 +620,7 @@ body.preloader-site {
 }
 
 .foto5 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/sherly-daeng-red-car.jpg");
+  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/sherly-daeng-lamaran.jpg");
   background-size: cover;
   background-position: center;
   background-repeat:no-repeat;
@@ -619,7 +629,7 @@ body.preloader-site {
 
 
 .foto6 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/sherly-daeng-engagement-ami.jpg");
+  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/sherly-daeng-engagement-ami.jpg");
   background-size: cover;
   background-position: center;
   background-repeat:no-repeat;
