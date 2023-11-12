@@ -36,30 +36,31 @@ html {
   font-color: #996E6D;
 }
 
-
 .hero {
-  background-image: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/1.jpg");
-  background: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/1.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    background: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/1.jpg#t=0.001")center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   background-attachment: fixed;
-  background-size: cover;
   color: whitesmoke;
   box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   font-family: 'Raleway', sans-serif;
 }
 
+@media (hover: none) {
+    .hero {
+        background-attachment: scroll;
+    }
+  }
+
 #home{
-    background: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/1.jpg#t=0.001") no-repeat center center fixed;
+    background: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/1.jpg#t=0.001")center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-attachment: fixed;
-    background-size: cover;
-  }
+}
 
 #regular-section{
   background: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/5-1.jpg") center;
@@ -83,6 +84,31 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+#tentang-sherly-daeng{
+    background: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/9.jpg") center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+#rsvp{
+    background: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/9.jpg") center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.hadiah {
+    color: white;
+    mix-blend-mode: difference;
+  font-size: 1.4rem;
+  font-family: 'Raleway', sans-serif;
+  font-size: ;
+  margin-bottom: 50px;
 }
 
 .hero .title {
@@ -371,12 +397,12 @@ vertical-align: middle;
   line-height: 25px;
   text-align: center;
   vertical-align: middle;
-  background: #c28285;
+  background: rgb(68, 65, 65);
   color: whitesmoke;    
 }
 
 .footer p {
-  color: white;
+  color: rgb(212, 212, 212);
   font-weight: 500;
   font-size: 10pt;
   display: inline-block;
@@ -586,58 +612,6 @@ body.preloader-site {
 }
 
 
-.foto1 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/sherly-daeng-kang-emil.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat:no-repeat;
-  min-height: 24rem;
-}
-
-
-.foto2 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/sherly-daeng-cashbac.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat:no-repeat;
-  min-height: 24rem;
-}
-
-.foto3 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/sherly-daeng-selfie.jpg");
-  background-size: cover;
-  background-position: top;
-  background-repeat:no-repeat;
-  min-height: 24rem;
-}
-
-.foto4 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/sherly-daeng-lamaran.jpg");
-  background-size: cover;
-  background-position: top;
-  background-repeat:no-repeat;
-  min-height: 24rem;
-}
-
-.foto5 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/sherly-daeng-lamaran.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat:no-repeat;
-  min-height: 24rem;
-}
-
-
-.foto6 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/sherly-daeng-engagement-ami.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat:no-repeat;
-  min-height: 24rem;
-}
-
-
-
 .title-foto {
   font-size: 18pt;
   font-family: 'Lato', sans-serif;
@@ -657,20 +631,14 @@ body.preloader-site {
   color: white;
 }
 
-/* .section-light {
-  background-image: url(../image/divider-flowers-leaves.png);
-  background-position: bottom -30px center;
-  background-repeat: no-repeat;
-  background-size: initial;
-} */
-
 .instagram {
-  color: #996E6D;
-  font-size: 1.25rem;
-  font-weight: 900;
-  margin-top: 0.5rem;
-  display: inline-block;
-  vertical-align: middle;
-  text-align: center;
-  padding: 10px;
+    color: white;
+    mix-blend-mode: difference;
+    font-size: 1.25rem;
+    font-weight: 900;
+    margin-top: 0.5rem;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    padding: 10px;
 }
