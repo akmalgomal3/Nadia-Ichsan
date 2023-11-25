@@ -63,7 +63,7 @@ html {
 }
 
 #regular-section{
-  background: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/5-1.jpg") center;
+  background: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/a1.jpg") center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -71,7 +71,7 @@ html {
 }
 
 #Waktu{
-  background: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/4-1.jpg") center;
+  background: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/a2.jpg") center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -79,7 +79,7 @@ html {
 }
 
 #lokasi{
-  background: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/8.jpg") center;
+  background: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/a3.jpg") center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -87,7 +87,7 @@ html {
 }
 
 #tentang-sherly-daeng{
-    background: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/9.jpg") center;
+    background: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/a4.jpg") center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -95,7 +95,7 @@ html {
   }
 
 #rsvp{
-    background: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/9.jpg") center;
+    background: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/a3.jpg") center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -104,7 +104,6 @@ html {
 
 .hadiah {
     color: white;
-    mix-blend-mode: difference;
   font-size: 1.4rem;
   font-family: 'Raleway', sans-serif;
   font-size: ;
@@ -118,13 +117,11 @@ html {
   font-size: 5rem;
   padding-bottom: 5px;
   color: white;
-  mix-blend-mode: difference;
 }
 
 .hero .subtitle {
   padding: 35px;
   color: rgb(185, 185, 185);
-  mix-blend-mode: difference;
   font-size: 1.3rem;
 }
 
@@ -333,11 +330,10 @@ html {
   font-family: 'Raleway', sans-serif;
   font-weight: 900;
   color: white;
-  mix-blend-mode: difference;
   text-transform: uppercase;
   font-size: 1.5rem;
   letter-spacing: 0px;
-  padding-bottom: 60px;
+  /* padding-bottom: 60px; */
 }
 
 .nama-lengkap {
@@ -360,7 +356,6 @@ vertical-align: middle;
 
 .bodytext {
   color: rgb(255, 255, 255);
-  mix-blend-mode: difference;
   font-size: 18px;
 }
 
@@ -437,6 +432,8 @@ vertical-align: middle;
 }
 
 .bismillah {
+    -webkit-filter: invert(1);
+   filter: invert(1);
   margin: 25px;
   margin-top: 75px;
   display: inline-block;
@@ -488,7 +485,7 @@ body.preloader-site {
 .preloader-wrapper {
   height: 100%;
   width: 100%;
-  background: #111111;
+  background: #686565;
   position: fixed;
   top: 0;
   left: 0;
@@ -633,7 +630,6 @@ body.preloader-site {
 
 .instagram {
     color: white;
-    mix-blend-mode: difference;
     font-size: 1.25rem;
     font-weight: 900;
     margin-top: 0.5rem;

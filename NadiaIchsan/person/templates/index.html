@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- {% load static %} -->
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -17,8 +17,8 @@
     <!-- Bulma Version 0.8.x-->
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/bulma-tooltip@0.1.5/dist/bulma-tooltip.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/nadiaikhsan.appspot.com/css/menikah.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/menikah.css' %}" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/nadiaikhsan.appspot.com/css/menikah.css" /> -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/menikah.css' %}" />
     <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/nadiaikhsan.appspot.com/css/jquery.countdown.css" />
     <script
       src="https://kit.fontawesome.com/2828f7885a.js"
@@ -81,7 +81,7 @@
               
               <div class="navbar-item">
                 <a class="navbar-item" href="#tentang-sherly-daeng">
-                  Gallery
+                  Hadiah
                 </a>
               </div>
               <div class="navbar-item">
@@ -95,55 +95,60 @@
         <!-- End Mobile Nav -->
         <!-- Begin Hero Content-->
         <div class="hero-body">
-          <div class="container has-text-centered">
-            <h1 class="subtitle">Undangan Pernikahan</h1>
-            <h2 class="title">Nadia & Chaerul</h2>
-            <h4 class="subtitle tempatwaktu">
-              
-                Minggu, 03 Desember 2023
-                </br>
-                Yayasan Masjid Al Ikhlas (YMAI), Cipete
-                </br>
-                Jakarta Selatan
-                </br>
-                <div class="space40px"></div>
-                Kepada YTH:
-            </h4>
-            <h4 class="penerima">
-              <b>{{ formatted_name }}</b>
-            </h4>
+            <div class="container" style="background-color: rgba(26, 26, 26, 0.5);">
+                <div class="container has-text-centered">
+                    <h1 class="subtitle" style="color: white;">Undangan Pernikahan</h1>
+                    <h2 class="title"style="color: #e0bb00;">Nadia & Chaerul</h2>
+                    <h4 class="subtitle tempatwaktu" style="color: white;">
+                      
+                        Minggu, 03 Desember 2023
+                        </br>
+                        Yayasan Masjid Al Ikhlas (YMAI), Cipete
+                        </br>
+                        Jakarta Selatan
+                        </br>
+                        <div class="space40px"></div>
+                        Kepada YTH:
+                    </h4>
+                    <h4 class="penerima"  style="color: #e0bb00;">
+                      <b>{{ formatted_name }}</b>
+                    </h4>
+        
+                  </div>
+                    <!-- Start Countdown -->       
+                    <div>
+                        <ul id="hitungmundur" >
+                        <li><span class="days" style="color: white;">00</span><p class="days_text" style="color: white;">Hari</p></li>
+                        <li class="separator" style="color: white;">:</li>
+                        <li><span class="hours" style="color: white;">00</span><p class="hours_text" style="color: white;">Jam</p></li>
+                        
+                        </ul>
+                        <div class="spasi">
+                        </div>
+                        <script type="text/javascript">
+                        var now = new Date();
+                        var day = now.getDate();
+                        var month = now.getMonth() + 1;
+                        var year = now.getFullYear() + 1;
+                    
+                        var nextyear = month + '/' + day + '/' + year + ' 07:07:07';
+                        var harih = '12/03/2023 11:00:00';
 
-          </div>
-          <!-- Start Countdown -->       
-          <div>
-            <ul id="hitungmundur" >
-              <li><span class="days" style="color: black;">00</span><p class="days_text" style="color: black;">Hari</p></li>
-              <li class="separator" style="color: black;">:</li>
-              <li><span class="hours" style="color: black;">00</span><p class="hours_text" style="color: black;">Jam</p></li>
-              
-            </ul>
-            <div class="spasi">
+                        $('#hitungmundur').countdown({
+                            date: harih, // TODO Date format: 07/27/2017 17:00:00
+                            offset: +7, // TODO Your Timezone Offset
+                            day: 'Hari',
+                            days: 'Hari'
+                        }, function () {
+                            alert('Done!');
+                        });
+                        </script>  
+                    </div>
+                    <!-- End Countdown -->
+                    <div class="space40px"></div>
             </div>
-            <script type="text/javascript">
-              var now = new Date();
-              var day = now.getDate();
-              var month = now.getMonth() + 1;
-              var year = now.getFullYear() + 1;
           
-              var nextyear = month + '/' + day + '/' + year + ' 07:07:07';
-              var harih = '12/03/2023 11:00:00';
-
-              $('#hitungmundur').countdown({
-                date: harih, // TODO Date format: 07/27/2017 17:00:00
-                offset: +7, // TODO Your Timezone Offset
-                day: 'Hari',
-                days: 'Hari'
-              }, function () {
-                alert('Done!');
-              });
-            </script>  
-          </div>
-          <!-- End Countdown -->
+          
         </div>
       </section>
       <!-- End Hero -->
@@ -154,221 +159,250 @@
     <div class="main-content">
     <!-- Begin regular-section-->
      <section class="section-light no-padding-top regular-section has-text-centered has-vertically-aligned-content" id="regular-section">
-        
-        <div data-aos="fade-up" data-aos-easing="linear">
-          <img src="https://storage.googleapis.com/nadiaikhsan.appspot.com/image/bis-item.png" class="bismillah has-text-centered" alt="Bismillahirrahmaanirrahiim">
+        <div class="container" style="background-color: rgba(26, 26, 26, 0.5); margin-top: 150px;padding-left: 15px;padding-right: 15px;">
+            <div data-aos="fade-up" data-aos-easing="linear">
+                <img src="https://storage.googleapis.com/nadiaikhsan.appspot.com/image/bis-item.png" class="bismillah has-text-centered" alt="Bismillahirrahmaanirrahiim">
+              </div>
+      
+              <p class="bodytext" data-aos="fade-up" data-aos-easing="linear" style="color: white">
+                “ Dan di antara tanda - tanda (Kebesaran)-Nya ialah Dia menciptakan pasangan
+                  - pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa
+                  tentram kepada-Nya, dan Dia menjadikan di antaramu rasa kasih dan sayang.
+                  Sungguh, pada yang demikian itu benar - benar terdapat tanda - tanda
+                  (kebesaran Allah) bagi kaum yang berpikir ” (QS. Ar Rum : 21)
+              </p>
+      
+              <div class="space40px"></div>
+      
+              <p class="bodytext" data-aos="fade-up" data-aos-easing="linear" style="color: white;">
+                <b style="color: #e0bb00;">Assalamu'alaikum Warahmatullahi Wabarakatuh.</b>
+                <br />
+                Dengan memohon Rahmat & Ridho Allah SWT. 
+                <br />
+                Kami mengundang bapak/ ibu/ saudara(i) untuk hadir pada pernikahan
+              </p>
+      
+              <div class="space40px"></div>
+      
+              <div data-aos="fade-up" data-aos-easing="linear">
+                <div class="nama-lengkap" style="color: #e0bb00;">
+                  <b>Nadia Nafisah, S.Ars.</b>
+                </div>
+                <p class="bodytext" data-aos="fade-up" data-aos-easing="linear" style="color: white;">
+                  Putri kedua dari Bapak dr. Azmy Raden & Ibu drg. Hj. Neneng Primiswati (Almh)
+                </p>
+                <div class="ampersand" style="color: #e0bb00;">&</div>
+                <div class="nama-lengkap" style="color: #e0bb00;">
+                  <b>Chaerul Ikhsan, S.T.</b>
+                </div>
+                <p class="bodytext" data-aos="fade-up" data-aos-easing="linear" style="color: white;">
+                  Putra pertama dari Bapak Buyung & Ibu Dedeh Komariah
+                </p>
+                 
+              </div>
+              <span class="space40px"></span>
+              <span class="space40px"></span>
+              <span class="space40px"></span>
+              <div class="space40px"></div>
         </div>
-
-        <p class="bodytext" data-aos="fade-up" data-aos-easing="linear">
-          “ Dan di antara tanda - tanda (Kebesaran)-Nya ialah Dia menciptakan pasangan
-            - pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa
-            tentram kepada-Nya, dan Dia menjadikan di antaramu rasa kasih dan sayang.
-            Sungguh, pada yang demikian itu benar - benar terdapat tanda - tanda
-            (kebesaran Allah) bagi kaum yang berpikir ” (QS. Ar Rum : 21)
-        </p>
-
-        <span class="space40px"></span>
-
-        <p class="bodytext" data-aos="fade-up" data-aos-easing="linear">
-          <b>Assalamu'alaikum Warahmatullahi Wabarakatuh.</b>
-          <br />
-          Dengan memohon Rahmat & Ridho Allah SWT. 
-          <br />
-          Kami mengundang bapak/ ibu/ saudara(i) untuk hadir pada pernikahan
-        </p>
-
-        <span class="space40px"></span>
-
-        <div data-aos="fade-up" data-aos-easing="linear">
-          <div class="nama-lengkap" >
-            <b>Nadia Nafisah, S.Ars.</b>
-          </div>
-          <p class="bodytext" data-aos="fade-up" data-aos-easing="linear">
-            Putri kedua dari Bapak dr. Azmy Raden & Ibu drg. Hj. Neneng Primiswati (Almh)
-          </p>
-          <div class="ampersand">&</div>
-          <div class="nama-lengkap">
-            <b>Chaerul Ikhsan, S.T.</b>
-          </div>
-          <p class="bodytext" data-aos="fade-up" data-aos-easing="linear">
-            Putra pertama dari Bapak Buyung & Ibu Dedeh Komariah
-          </p>
-           
-        </div>
-        <span class="space40px"></span>
-        <div data-aos="fade-up" data-aos-easing="linear">
-          <img src="https://storage.googleapis.com/nadiaikhsan.appspot.com/image/divider-leaves.png" class="divider has-text-centered" alt="~~~">
-        </div>
-        <span class="space40px"></span>
-        <span class="space40px"></span>
       </section>
       <!-- End regular-section-->    
       
       <!-- Begin Waktu Section -->
       <section class="section-dark" id="Waktu">
-        <div class="container">
-
-          <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
-            <h1 class="title has-text-centered section-title">Waktu</h1>
-          </div>
-          <div class="columns is-multiline" data-aos="fade-up" data-aos-easing="linear">
-            <div
-              class="column is-4 has-vertically-aligned-content">
-            
-              <p class="is-larger has-text-centered">
-                  <div class="waktu tanggal-hari has-text-centered">Minggu</div> 
-                  <div class="waktu tanggal-angka has-text-centered">03</div>
-                  <div class="waktu tanggal-bulan has-text-centered">Desember 2023</div>
-              </p>
-            
-            </div>
-            <div class="column is-4 has-vertically-aligned-content">
-            
-              <p class="waktu is-larger has-text-centered">
-                Akad Nikah:
-                <br>
-                <b>09.00 WIB</b>
-              </p>
-            
-            </div>
-
-            <div class="column is-4 has-vertically-aligned-content">
-              
-              <h1 class="waktu is-larger has-text-centered">
-                Resepsi:
-                <br>
-                <b>11.00  - 13.00 WIB</b>
-              </h1>
-              
-              
-            </div>
-
-          </div>
-        </div>
+        <div class="space40px"></div>  
         <div class="space40px"></div>
-        <div class="main-content has-text-centered" data-aos="fade-up" data-aos-easing="linear">
-          <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=a2thdGVrYWx2ZGlrdThrcWpqbGw2aHJjdGsgYWttYWxtdWhhbWFkNjhAbQ&tmsrc=akmalmuhamad68%40gmail.com" target="_blank" class="button has-tooltip btn-cta" data-tooltip="Add to Calendar" target="_blank" data-aos="zoom-in">
-            <i class="far fa-calendar-plus"></i>
-            &nbsp;&nbsp;Google Calendar
-          </a>
+        <div class="container" style="background-color: rgba(26, 26, 26, 0.5); padding-left: 15px;padding-right: 15px;">
+            <div class="space40px"></div>
+            <div class="container">
+                              
+                <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
+                  <h1 class="title has-text-centered section-title" style="color: white; font-size: 40px;">Waktu</h1>
+                </div>
+                
+                <div class="space40px"></div>
+                <div class="columns is-multiline" data-aos="fade-up" data-aos-easing="linear">
+                  <div
+                    class="column is-4 has-vertically-aligned-content">
+
+                    <span class="space40px"></span>
+                    <p class="is-larger has-text-centered">
+                          <div class="waktu tanggal-hari has-text-centered" style="color: white;">Minggu</div> 
+                          <div class="waktu tanggal-angka has-text-centered" style="color: #e0bb00;">03</div>
+                          <div class="waktu tanggal-bulan has-text-centered" style="color: white;">Desember 2023</div>
+                    </p>
+                  
+                  </div>
+                  <div class="space40px"></div>
+                  <div class="column is-4 has-vertically-aligned-content">
+                  
+                    <p class="waktu is-larger has-text-centered" style="color: white;">
+                      Akad Nikah:
+                      <br>
+                      <b style="color: #e0bb00;">09.00 WIB</b>
+                    </p>
+                  
+                  </div>
+      
+                  <div class="space40px"></div>
+                  <div class="column is-4 has-vertically-aligned-content">
+                    
+                    <h1 class="waktu is-larger has-text-centered" style="color: white;">
+                      Resepsi:
+                      <br>
+                      <b style="color: #e0bb00;">11.00  - 13.00 WIB</b>
+                    </h1>
+                    
+                    
+                  </div>
+      
+                </div>
+              </div>
+              <div class="space40px"></div>
+              <div class="main-content has-text-centered" data-aos="fade-up" data-aos-easing="linear">
+                <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=a2thdGVrYWx2ZGlrdThrcWpqbGw2aHJjdGsgYWttYWxtdWhhbWFkNjhAbQ&tmsrc=akmalmuhamad68%40gmail.com" target="_blank" class="button has-tooltip btn-cta" data-tooltip="Add to Calendar" target="_blank" data-aos="zoom-in">
+                  <i class="far fa-calendar-plus"></i>
+                  &nbsp;&nbsp;Google Calendar
+                </a>
+              </div>
+              <div class="space40px"></div>
         </div>
+        
       </section>
       <!-- End Waktu Content -->
 
       <!-- Begin Lokasi Section -->
       <section class="section-darker" id="lokasi" >
-        <div class="container">
-          <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
-            <h1 class="title has-text-centered section-title">Lokasi</h1>
-            <p class="tempat is-larger has-text-centered">
-              <b>Yayasan Masjid Al Ikhlas (YMAI) Cipete</b>
-            </p>
-          </div>
-          <div class="section-map" data-aos="fade-up" data-aos-easing="linear">
-            <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJqy1No5TxaS4RBLXMO_1Kh6o&key=AIzaSyD2KTLFux3_E5n3EObQDfZ6ahdsbOZLarg"></iframe>
-          </div>
-          <div class="space40px"></div>
-          <div class="has-text-centered" data-aos="fade-up" data-aos-easing="linear">
-            <a href="https://maps.app.goo.gl/YbwCF563v8JUKJi26" class="button btn-cta" target="_blank" data-aos="zoom-in">
-              <i class="far fa-directions"></i>
-              &nbsp;&nbsp;Google Maps
-            </a>
-          </div>
+        <div class="container" style="background-color: rgba(26, 26, 26, 0.5);margin-top: 50px; padding-left: 15px;padding-right: 15px;">
+            <div class="container">
+                <div class="space40px"></div>
+                
+              <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">            
+                <h2 class="title has-text-centered section-title" style="color: white; font-size: 40px;">Lokasi</h2>
+                <div class="space40px"></div>
+                <p class="tempat is-larger has-text-centered" style="color: #e0bb00;">
+                  <b>Yayasan Masjid Al Ikhlas (YMAI) Cipete</b>
+                </p>
+              </div>
+              <div class="section-map" data-aos="fade-up" data-aos-easing="linear">
+                <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJqy1No5TxaS4RBLXMO_1Kh6o&key=AIzaSyD2KTLFux3_E5n3EObQDfZ6ahdsbOZLarg"></iframe>
+              </div>
+              <div class="space40px"></div>
+              <div class="has-text-centered" data-aos="fade-up" data-aos-easing="linear">
+                <a href="https://maps.app.goo.gl/YbwCF563v8JUKJi26" class="button btn-cta" target="_blank" data-aos="zoom-in">
+                  <i class="far fa-directions"></i>
+                  &nbsp;&nbsp;Google Maps
+                </a>
+              </div>
+              <div class="space40px"></div>
+            </div>
         </div>
       </section>
       <!-- End Lokasi Content -->
 
       <!-- Begin hadiah Section -->
       <section class="section-dark contact" id="tentang-sherly-daeng">
-        <div class="container">
-          <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
-            <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">hadiah</h1>
-            </div>
-            <p class="bodytext has-text-centered" data-aos="fade-up" data-aos-easing="linear">
-                <b>Tanda Kasih</b>
-                <br>
-                Tanpa mengurangi rasa hormat, bagi tamu undangan yang berkenan memberikan
-                tanda kasih untuk kami, dapat melalui
-            </p>
+        <div class="container" style="background-color: rgba(26, 26, 26, 0.5);margin-top: 100px;padding-left: 15px;padding-right: 15px;">
             <div class="space40px"></div>
-
-            <p class="bodytext has-text-centered" data-aos="fade-up" data-aos-easing="linear">
-                Bank BCA
-                <br>
-                <b>an. Nadia Nafisah</b>
-                <br>
-                <b>8010423407</b>
-            </p>
-            <div class="space40px"></div>
-
-            <p class="bodytext has-text-centered" data-aos="fade-up" data-aos-easing="linear">
-                Bank BCA
-                    <br>
-                    <b>an. Chaerul Ikhsan</b>
-                    <br>
-                    <b>7485096728</b>
-            </p>
-
+            <div class="container">
+                    <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
+                    <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear" style="color: #e0bb00; font-size: 40px;">hadiah</h1>
+                  </div>
+                  <div class="space40px"></div>
+                  <div class="space40px"></div>
+                  <div class="space40px"></div>
+                  <div class="space40px"></div>
+                  <p class="bodytext has-text-centered" data-aos="fade-up" data-aos-easing="linear" style="color: white;">
+                      <b>Tanda Kasih</b>
+                      <br>
+                      Tanpa mengurangi rasa hormat, bagi tamu undangan yang berkenan memberikan
+                      tanda kasih untuk kami, dapat melalui
+                  </p>
+                  <div class="space40px"></div>
+                  <div class="space40px"></div>
+                  <div class="space40px"></div>
+                  <div class="space40px"></div>
+                  <p class="bodytext has-text-centered" data-aos="fade-up" data-aos-easing="linear" style="color: white;">
+                      Bank BCA
+                      <br>
+                      <b style="color: #e0bb00;">an. Nadia Nafisah</b>
+                      <br>
+                      <b style="color: #e0bb00;">8010423407</b>
+                  </p>
+                  <div class="space40px"></div>
+      
+                  <p class="bodytext has-text-centered" data-aos="fade-up" data-aos-easing="linear" style="color: white;">
+                      Bank BCA
+                          <br>
+                          <b style="color: #e0bb00;">an. Chaerul Ikhsan</b>
+                          <br>
+                          <b style="color: #e0bb00;">7485096728</b>
+                  </p>
+      
+              </div>
+              <div class="space40px"></div>
         </div>
-
       </section>
       <!-- End hadiah Content -->
 
       <!-- Begin RSVP Content -->
       <section class="section-dark contact" id="rsvp">
-        <div class="container">
-          <div class="columns is-multiline">          
-            <div class="column is-12 prolog">
-              <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">Konfirmasi Kehadiran</h1>
-            </div>
-            
-            <p class="bodytext has-text-centered" data-aos="fade-up" data-aos-easing="linear">
-                Merupakan suatu kehormatan dan kebahagiaan bagi kami
-                <br>
-                apabila bapak/ ibu/
-                saudara(i) berkenan hadir dan memberikan doa restu kepada kami kedua
-                mempelai.
-                <br>
-                <br>
-                Atas kehadiran dan doa restu bapak/ ibu/ saudara(i) kami ucapkan
-                terimakasih.
-                </p>
-            
-            <div class="column is-12 prolog has-text-centered" data-aos="fade-up" data-aos-easing="linear">
-              <a href="https://api.whatsapp.com/send?phone=6285718165295&text=Halo%20Nadia,%20saya%20akan%20datang%20di%20acara%20pernikahan&source=&data=" class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
-                <i class="fab fa-whatsapp"></i>
-                &nbsp;&nbsp;Kabari Nadia
-              </a>
-              
-
-          
-              <a href="https://api.whatsapp.com/send?phone=6285720647497&text=Halo%20Ichsan,%20saya%20akan%20datang%20di%20acara%20pernikahan&source=&data=" class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
-                <i class="fab fa-whatsapp"></i>
-                &nbsp;&nbsp; Kabari Ikhsan
-              </a >
-
-              <div class="space40px"></div>
-              <div data-aos="fade-up" data-aos-easing="linear">
-                <img src="https://storage.googleapis.com/nadiaikhsan.appspot.com/image/divider-leaves.png" class="divider has-text-centered" alt="~~~">
+        <div class="container" style="background-color: rgba(26, 26, 26, 0.5);margin-top: 120px;padding-left: 15px;padding-right: 15px;">
+            <div class="space40px"></div>
+            <div class="container">
+                <div class="columns is-multiline">          
+                  <div class="column is-12 prolog">
+                    <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear" style="color: #e0bb00; font-size: 40px;">RSVP</h1>
+                  </div>
+                  <div class="space40px"></div>
+                  <div class="space40px"></div>
+                  <p class="bodytext has-text-centered" data-aos="fade-up" data-aos-easing="linear" style="color: white;">
+                      Merupakan suatu kehormatan dan kebahagiaan bagi kami
+                      <br>
+                      apabila bapak/ ibu/
+                      saudara(i) berkenan hadir dan memberikan doa restu kepada kami kedua
+                      mempelai.
+                      <br>
+                      <br>
+                      Atas kehadiran dan doa restu bapak/ ibu/ saudara(i) kami ucapkan
+                      terimakasih.
+                      </p>
+                  
+                  <div class="column is-12 prolog has-text-centered" data-aos="fade-up" data-aos-easing="linear">
+                    <a href="https://api.whatsapp.com/send?phone=6285718165295&text=Halo%20Nadia,%20saya%20akan%20datang%20di%20acara%20pernikahan&source=&data=" class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
+                      <i class="fab fa-whatsapp"></i>
+                      &nbsp;&nbsp;Kabari Nadia
+                    </a>
+                    
+      
+                
+                    <a href="https://api.whatsapp.com/send?phone=6285720647497&text=Halo%20Ikhsan,%20saya%20akan%20datang%20di%20acara%20pernikahan&source=&data=" class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
+                      <i class="fab fa-whatsapp"></i>
+                      &nbsp;&nbsp; Kabari Ikhsan
+                    </a >
+                  
+                    <div class="space40px"></div>
+                    <p class="h2 subtitle" data-aos="fade-up" data-aos-easing="linear" style="color: white;">
+                      Kami yang berbahagia,
+                      <br>
+                      <a class="instagram" href="https://instagram.com/nadiannafisa" target="_blank" alt="Instagram Nadia" style="color: #e0bb00;">
+                        <i class="fab fa-instagram"></i> @nadiannafisa
+                      </a>
+                      &nbsp
+                      <a class="instagram" href="https://instagram.com/chaerulikhsanss" target="_blank" alt="Instagram Ikhsan" style="color: #e0bb00;">
+                        <i class="fab fa-instagram"></i> @chaerulikhsanss
+                      </a>
+                    </p>
+      
+                  </div>
+       
+               </div>
               </div>
               <div class="space40px"></div>
-              <p class="h2 subtitle" data-aos="fade-up" data-aos-easing="linear" style="color: white;">
-                Kami yang berbahagia,
-                <br>
-                <a class="instagram":" href="https://instagram.com/nadiannafisa" target="_blank" alt="Instagram Nadia">
-                  <i class="fab fa-instagram"></i> @nadiannafisa
-                </a>
-                &nbsp
-                <a class="instagram" href="https://instagram.com/chaerulikhsanss" target="_blank" alt="Instagram Ikhsan">
-                  <i class="fab fa-instagram"></i> @chaerulikhsanss
-                </a>
-              </p>
-
-            </div>
- 
-         </div>
         </div>
+        
       </section>
+      
       <!-- End RSVP Content -->
     </div>
     <!-- End Main Content -->
@@ -376,8 +410,14 @@
     <!-- Begin Footer -->
     <div class="footer">
       <div class="container">
-        <a href="https://github.com/daengdoang/daeng-sherly-menikah" class="has-vertically-align">
+        <a href="https://github.com/akmalgomal3/Nadia-Ichsan" class="has-vertically-align">
           <p class="has-vertically-align">2023 &copy Daeng Muhammad Feisal & Muhamad Akmal</p>
+        </a>
+        <a href="https://www.instagram.com/arumanis.wedding/" class="has-vertically-align">
+            <p class="has-vertically-align">arumanis.wedding</p>
+          </a>
+        <a href="https://www.instagram.com/dadoburger.id/" class="has-vertically-align">
+            <p class="has-vertically-align">dadoburger.id</p>
         </a>
         <a href="https://bulma.io" class="has-vertically-align">
           <img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma">
