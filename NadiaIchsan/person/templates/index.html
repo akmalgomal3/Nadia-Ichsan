@@ -44,10 +44,34 @@
   </head>
 
   <body>
-    <!-- Begin Preloader -->
+    <!-- <audio style="display: none;" autoplay>
+        <source src="https://storage.googleapis.com/nadiaikhsan.appspot.com/aaa.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio> -->
+      <!-- <audio src="https://storage.googleapis.com/nadiaikhsan.appspot.com/aaa.mp3" autoplay controls loop></audio> -->
+      <div id="audio-container">
+        <div id="play-pause-btn" onclick="togglePlayPause()">
+          <img src="https://storage.googleapis.com/nadiaikhsan.appspot.com/image/musik.gif" alt="Play">
+        </div>
+        <audio id="audio-player" src="https://storage.googleapis.com/nadiaikhsan.appspot.com/aa.mp3" loop></audio>
+      </div>
+      <script>
+        var audioPlayer = document.getElementById('audio-player');
+        var playPauseBtn = document.getElementById('play-pause-btn');
+
+        function togglePlayPause() {
+        if (audioPlayer.paused) {
+            audioPlayer.play();
+        } else {
+            audioPlayer.pause();
+        }
+        }
+      </script>
+    
+      <!-- Begin Preloader -->
     <div class="preloader-wrapper">
       <div class="preloader">
-        <img src="https://storage.googleapis.com/nadiaikhsan.appspot.com/image/thumbnail.PNG" alt="Flower" />
+        <img src="https://storage.googleapis.com/nadiaikhsan.appspot.com/image/preloada.jpg" alt="Flower" />
       </div>
     </div>
     <!-- End Preloader-->
@@ -376,9 +400,9 @@
                     
       
                 
-                    <a href="https://api.whatsapp.com/send?phone=6285720647497&text=Halo%20Ikhsan,%20saya%20akan%20datang%20di%20acara%20pernikahan&source=&data=" class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
+                    <a href="https://api.whatsapp.com/send?phone=6285720647497&text=Halo%20Chaerul,%20saya%20akan%20datang%20di%20acara%20pernikahan&source=&data=" class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
                       <i class="fab fa-whatsapp"></i>
-                      &nbsp;&nbsp; Kabari Ikhsan
+                      &nbsp;&nbsp; Kabari Chaerul
                     </a >
                   
                     <div class="space40px"></div>

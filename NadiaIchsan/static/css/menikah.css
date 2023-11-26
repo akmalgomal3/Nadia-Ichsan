@@ -5,6 +5,30 @@
   justify-content: center;
 }
 
+#audio-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999; /* Pastikan elemen ini selalu di atas elemen lainnya */
+  }
+  
+  #play-pause-btn {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #play-pause-btn img {
+    width: 20px;
+    height: 20px;
+  }
+
 * {
   box-sizing: border-box;
 }
@@ -37,7 +61,7 @@ html {
 }
 
 .hero {
-    background: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/1.jpg#t=0.001")center;
+    background: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/a5.jpg")center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -55,7 +79,7 @@ html {
   }
 
 #home{
-    background: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/1.jpg#t=0.001")center;
+    background: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/a5.jpg")center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -95,7 +119,7 @@ html {
   }
 
 #rsvp{
-    background: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/a3.jpg") center;
+    background: url("https://storage.googleapis.com/nadiaikhsan.appspot.com/image/a6.jpg") center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -132,7 +156,6 @@ html {
 }
 
 .hero .penerima {
-  padding-top: 35px;
   font-size: 1.3rem;
   color: gold;
   
